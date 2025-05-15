@@ -1,6 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import logo from '../../assets/tingresearch-logo.png';
+import { FaTelegramPlane, FaTwitter, FaFacebookF, FaYoutube, FaBitcoin  } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -53,20 +54,20 @@ const Footer = () => {
         
         <div className="footer-bottom">
           <div className="social-links">
-            <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" className="social-icon">
-              <i className="fab fa-telegram-plane"></i>
+            <a href="https://t.me/TingResearch" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Telegram">
+              <FaTelegramPlane />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-              <i className="fab fa-twitter"></i>
+            <a href="https://x.com/TingResearch" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Twitter">
+              <FaTwitter />
             </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-              <i className="fab fa-facebook-f"></i>
+            <a href="https://www.facebook.com/TingResearch" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Facebook">
+              <FaFacebookF />
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-              <i className="fab fa-youtube"></i>
+            <a href="https://www.youtube.com/@TingResearchs" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="YouTube">
+              <FaYoutube />
             </a>
-            <a href="https://discord.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-              <i className="fab fa-discord"></i>
+            <a href="https://coinmarketcap.com/community/profile/TingResearch/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="CoinMarketCap">
+              <FaBitcoin />
             </a>
           </div>
           

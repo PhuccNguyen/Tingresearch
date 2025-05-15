@@ -1,19 +1,21 @@
-# Chọn image node chính thức
-FROM node:16
+# Build stage
+FROM node:16 as build
 
-# Cài đặt thư mục làm việc
 WORKDIR /app
 
-# Copy package.json và cài đặt các dependencies
 COPY package*.json ./
 RUN npm install
 
-# Copy toàn bộ mã nguồn vào container
 COPY . .
 
-# Build ứng dụng React
 RUN npm run build
 
-# Dựng server cho React
-EXPOSE 3000
-CMD ["npm", "start"]
+# Production stage
+FROM nginx:stable-alpine
+
+# Copy build React vào thư mục nginx để serve
+COPY --from=build /app/build /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
